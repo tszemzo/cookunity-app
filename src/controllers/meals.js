@@ -34,7 +34,7 @@ async function createMeal({
   chefId,
   name,
   description = '',
-}) {
+} = {}) {
   if (!chefId) {
     throw new Error('Chef ID is required');
   }

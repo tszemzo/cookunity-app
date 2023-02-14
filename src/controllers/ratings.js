@@ -13,7 +13,7 @@ async function createRating({
   rate,
   customerId,
   mealId,
-}) {
+} = {}) {
   if (!rate || !customerId || !mealId) {
     throw new Error('Missing required fields');
   }
@@ -34,7 +34,7 @@ async function createRating({
 
   const rating = await ratingsInterface.getRating(customerId, mealId);
   if (rating) {
-    throw new Error("You already rated this meal");
+    throw new Error('You already rated this meal');
   };
 
   return ratingsInterface.createRating({

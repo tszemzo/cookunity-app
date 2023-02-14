@@ -1,0 +1,35 @@
+{
+  "name": "cookunity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "add-migration": "npx sequelize-cli migration:generate --name",
+    "add-seeders": "npx sequelize-cli db:seed:all",
+    "undo-seeders": "npx sequelize-cli db:seed:undo:all",
+    "docker:down": "docker compose down -v",
+    "docker:up": "docker compose up -d"
+  },
+  "author": "Tomas <szemzotomas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0"
+  }
+}
